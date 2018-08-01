@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="../../LEMP/LEMP.js"></script>
+<script type="text/javascript" src="../../common/js/menu.js"></script>
+<script type="text/javascript" src="../js/NAV0001.js?ver=2"></script>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
+}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: white;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-white"> 
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <i class="fa fa-address-card-o w3-xxlarge"></i>
+    <p>내정보</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <i class="fa fa-truck w3-xxlarge w3-white"></i>
+    <p>목록</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-white">
+    <span class="glyphicon glyphicon-map-marker" style="font-size:40px; margin:0"></span>
+    <p>지도</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <i class="fa fa-barcode w3-xxlarge"></i>
+    <p>바코드</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" >
+  <div class="w3-bar w3-center w3-small" >
+    <button class="w3-bar-item w3-button  tablink w3-white w3-hover-red" style="width:25% !important; border-bottom: 0;" onclick="openTab(event,'info')">
+   <i class="fa fa-address-card-o " style="font-size:24px"></i><br>내정보</button>
+    <button class="w3-bar-item w3-button w3-white tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'list')">
+    <i class="fa fa-truck" style="font-size:24px"></i><br>목록</button>
+    <button class="w3-bar-item w3-button w3-red tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'navigation')">
+   <i class="fa fa-map-marker" style="font-size:24px"></i><br>지도</button>
+    <button class="w3-bar-item w3-button w3-white tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'bacode')">
+    <i class="fa fa-barcode" style="font-size:24px"></i><br>바코드</button>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="" style="margin:0px 0px 0px 0px;" id="main">
+ <div id="navigation" class="w3-container  tab" style="margin-top:50px;" >
+    <h2>지도</h2>
+    <p>지도들어갈곳</p>
+  </div>
+</div>
+<!-- END PAGE CONTENT -->
+
+<script>
+
+</script>
+
+</body>
+</html>

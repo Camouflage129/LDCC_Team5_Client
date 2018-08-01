@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+.w3-button:hover {
+
+}
+</style>
+<body>
+    <div class="w3-modal-content w3-animate-top">
+      <header class="w3-container w3-red"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h4>배송지 정보</h4>
+      </header>
+      <div class="w3-container">
+      <center><p><img src="../images/box.png" style="width:150px;" class="w3-padding-32">
+    </p></center>
+       
+
+    <ul class="w3-ul w3-light-grey w3-section">
+  <li><label>주   소</label>&nbsp;&nbsp;서울시 강남구 청담동 61</li>
+  <li><label>수취인</label>&nbsp;&nbsp;홍길동</li>
+  
+</ul>
+      </div>
+      <footer class="w3-container w3-padding-bottom">
+        <div class="w3-bar w3-section w3-center"><button class="w3-button w3-red w3-hover-red">전화</button>
+        <button class="w3-button w3-brown w3-hover-brown" onclick="msgSelect();">메세지</button>
+        <button class="w3-button w3-green w3-hover-green">배송완료</button>
+        </div>
+      </footer>
+    </div>
+  
+  <div id="id02" class="w3-modal" style="padding-top:200px;">
+  <div class="w3-modal-content w3-animate-zoom">
+
+    <header class="w3-container w3-brown"> 
+      <span onclick="document.getElementById('id02').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h4>메세지 선택</h4>
+    </header>
+
+    <div class="w3-container">
+       <ul class="w3-ul w3-light-grey w3-section">
+        <li><button class="w3-button w3-hover-light-grey">곧 방문하겠습니다</button></li>
+  <li><button class="w3-button  w3-hover-light-grey">문 앞에 두고 갑니다</button></li>
+  <li><button class="w3-button  w3-hover-light-grey">경비실에 맡기고 갑니다</button></li>
+    <li><button class="w3-button  w3-hover-light-grey">직접 입력</button></li>
+</ul>
+    </div>
+  </div>
+</div>
+
+<script>
+function msgSelect(){
+	document.getElementById('id02').style.display='block';
+}
+</script>
+
+</body>
+</html>
