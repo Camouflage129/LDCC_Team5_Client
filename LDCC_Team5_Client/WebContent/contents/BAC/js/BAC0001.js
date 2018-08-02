@@ -4,6 +4,17 @@ var page = {
 		page.initLayout(args.data);
 	},
 	
+	callback : function(data) {
+		LEMP.Window.replace({
+			"_sPagePath" : "LIST/html/LIST0001.html",
+			"_sName" : "replacePage",
+			"_bHardwareAccel" : true,
+			"_oMessage" : {
+				"param" : ""
+			}
+		});
+	},
+	
 	initInterface : function(data) {
 		
 	},

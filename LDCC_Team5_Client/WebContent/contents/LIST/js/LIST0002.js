@@ -33,6 +33,15 @@ function LMessage() {
 	})
 }
 
+function closeLIST0002() {
+	LEMP.Window.close({
+	    "_oMessage" : {
+	        "param" : ""
+	    },
+	    "_sCallback" : "page.callback"
+	});
+}
+
 function call() {
 	LEMP.System.callTEL({
 		"_sNumber" : "01076871249", //$("#phone").val()
