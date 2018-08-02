@@ -27,7 +27,7 @@ var page = {
 		    		    	        "param" : result
 		    		    	    }
 		    		    	});
-		    				$("#barcode_result").text(result);
+		    				$("#barcode_result").text(JSON.stringify(result));
 		    		    },
 					    error : function(){ 
 					    	alert("일치하는 정보가 없습니다.");
