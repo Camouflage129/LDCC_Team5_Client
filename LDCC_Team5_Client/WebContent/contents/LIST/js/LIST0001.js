@@ -50,7 +50,7 @@ var page = {
 							tag += '</tr>';
 						}
 						else {
-							tag += '<tr class="w3-red">';
+							tag += '<tr onclick="desView2(' + value.num + ');" class="w3-red">';
 							tag += '<td>' + value.num + '</td>';
 							tag += '<td>' + value.address + '</td>';
 							tag += '<td>' + value.recipient + '</td>';
@@ -100,6 +100,26 @@ function desView(i) {
 			$.each(result, function(key, value) {
 				LEMP.Window.open({
 					"_sPagePath" : "LIST/html/LIST0003.html",
+					"_sType" : "popup",
+					"_sWidth" : "90%",
+					"_sHeight" : "80%",
+					"_oMessage" : {
+						"param" : value
+					}
+				});
+			});
+		}
+	})
+}
+
+function desView2(i) {
+	$.ajax({
+		type : "GET",
+		url : "http://52.79.44.163:8080/LDCC_Team5_Server/getProductInfo2/" + i,
+		success : function(result) {
+			$.each(result, function(key, value) {
+				LEMP.Window.open({
+					"_sPagePath" : "LIST/html/LIST0004.html",
 					"_sType" : "popup",
 					"_sWidth" : "90%",
 					"_sHeight" : "80%",
