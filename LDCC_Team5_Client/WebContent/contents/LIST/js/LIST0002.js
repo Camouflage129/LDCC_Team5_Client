@@ -52,7 +52,7 @@ function closeLIST0002() {
 	    "_oMessage" : {
 	        "param" : ""
 	    },
-	    "_sCallback" : "page.callback",
+	    "_sCallback" : "",
 	    "_sType" : "popup"
 	});
 }

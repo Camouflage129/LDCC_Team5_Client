@@ -78,20 +78,25 @@ var page = {
 }
 
 function desView(i) {
+	$.ajax({
+		type : "GET",
+		url : "52.79.44.163:8080/LDCC_Team5_Server/getProductInfo2/"+i,
+		success : function(result) {
+			LEMP.Window.open({
+				"_sPagePath" : "LIST/html/LIST0002.html",
+				"_sType" : "popup",
+				"_sWidth" : "90%",
+				"_sHeight" : "80%",
+				"_oMessage" : {
+					"param" : result
+				}
+			});
+		}
+	})
 	
-	LEMP.Window.open({
-	    "_sPagePath" : "LIST/html/LIST0002.html",
-	    "_sType" : "popup",
-	    "_sWidth" : "70%",
-	    "_sHeight" : "80%",
-	    "_oMessage" : {
-	        "param" : i
-	    }
-	});
-	
-	
+	/*alert("test");
 	$("#id01").load("LIST0002.html");
-	document.getElementById('id01').style.display = 'block';
+	document.getElementById('id01').style.display = 'block';*/
 }
 
 function search() {
