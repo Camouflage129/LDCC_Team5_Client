@@ -11,8 +11,32 @@ var page = {
 	initLayout : function(data) {
 		LEMP.Window.openCodeReader({
 		    "_fCallback" : function(resOpenCodeReader)  {
-		        alert(JSON.stringify(resOpenCodeReader));
-		        $("#barcode_result").text(JSON.stringify(resOpenCodeReader));
+		    	if(resOpenCodeReader.result) {
+		    		var data = resOpenCodeReader.data;
+		    		alert(data);
+		    		$.ajax({
+		    			type : 'GET',
+		    			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductInfo/'+data,
+		    		    success : function(result)  {
+		    		    	LEMP.Window.open({
+		    		    	    "_sPagePath" : "LIST/html/LIST0002.html",
+		    		    	    "_sType" : "popup",
+		    		    	    "_sWidth" : "70%",
+		    		    	    "_sHeight" : "80%",
+		    		    	    "_oMessage" : {
+		    		    	        "param" : result
+		    		    	    }
+		    		    	});
+		    				$("#barcode_result").text(result);
+		    		    },
+					    error : function(){ 
+					    	alert("일치하는 정보가 없습니다.");
+					    }
+		    		});
+		    	}
+		    	else {
+		    		alert("인식이 제대로 되지 않았습니다.");
+		    	}
 		    }
 		});
 	}

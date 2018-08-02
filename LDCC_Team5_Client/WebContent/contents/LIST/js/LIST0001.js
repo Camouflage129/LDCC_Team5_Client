@@ -30,11 +30,11 @@ var page = {
 		    		tag += '<th style="width:60%;" class="w3-center">주소</th>';
 		    		tag += '<th style="width:20%;"  class="w3-center">수취인</th>';
 		    		tag += '</tr>';
-		    		for(var i=1; i<=args.length; i++) {
+		    		for(var i=1; i<=result.length; i++) {
 		    			tag += '<tr onclick="desView('+i+');">';
 		    			tag += '<td>'+i+'</td>';
-		    			tag += '<td>'+args.address+'</td>';
-		    			tag += '<td>'+args.recipient+'</td>';
+		    			tag += '<td>'+result.address+'</td>';
+		    			tag += '<td>'+result.recipient+'</td>';
 		    			tag += '</tr>';
 		    			tag += '</table>';
 		    		}
