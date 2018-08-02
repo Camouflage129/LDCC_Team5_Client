@@ -19,10 +19,7 @@ var page = {
 		    			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductInfo/'+data,
 		    		    success : function(result)  {
 		    		    	LEMP.Window.open({
-		    		    	    "_sPagePath" : "LIST/html/LIST0002.html",
-		    		    	    "_sType" : "popup",
-		    		    	    "_sWidth" : "70%",
-		    		    	    "_sHeight" : "80%",
+		    		    		"_sPagePath" : "LIST/html/LIST0002.html",
 		    		    	    "_oMessage" : {
 		    		    	        "param" : result
 		    		    	    }

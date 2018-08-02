@@ -1,9 +1,9 @@
 var page = {
 	init : function(args) {
-		page.initLayout(args.data);
+		page.initLayout(args);
 	},
 	initLayout : function(data) {
-		var product = data.param;
+		var product = data.data.param;
 		$("#address").append('<label>주   소</label>&nbsp;&nbsp;' + product.address);
 		$("#recipient").append('<label>수취인</label>&nbsp;&nbsp;' + product.recipient);
 		$("#phone").val(product.phone);
