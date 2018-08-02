@@ -43,7 +43,7 @@ function openTab(evt, tabName) {
 			}
 		});
 	}
-	if (tabName == "bacode") {
+	if (tabName == "barcode") {
 		LEMP.Window.replace({
 			"_sPagePath" : "BAC/html/BAC0001.html",
 			"_sName" : "replacePage",

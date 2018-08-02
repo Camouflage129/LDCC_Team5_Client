@@ -40,17 +40,56 @@ var page = {
 			    	tag += '</table>';
 			    	$("#list").append(tag);
 		    	}
-		    	else
-		    		alert("일치하는 정보가 없습니다.");
-		    },
-		    error : function(){ 
-		    	alert("일치하는 정보가 없습니다.");
+		    	else {
+		    		var tag = '';
+	    		tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
+	    		tag += '<tr>';
+	    		tag += '<th style="width:20%;"  class="w3-center">순서</th>';
+	    		tag += '<th style="width:60%;" class="w3-center">주소</th>';
+	    		tag += '<th style="width:20%;"  class="w3-center">수취인</th>';
+	    		tag += '</tr>';
+	    	
+	    			tag += '<tr>';
+	    			tag += '<td colspan="3" class="w3-center">일치하는 정보가 없습니다.</td>';
+	    			tag += '</tr>';
+	    			tag += '</table>';
+	    			$("#list").append(tag);
+	    		
+	    		
+		    }},
+		    error : function(){  
+		    	var tag = '';
+	    		tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
+	    		tag += '<tr>';
+	    		tag += '<th style="width:20%;"  class="w3-center">순서</th>';
+	    		tag += '<th style="width:60%;" class="w3-center">주소</th>';
+	    		tag += '<th style="width:20%;"  class="w3-center">수취인</th>';
+	    		tag += '</tr>';
+	    	
+	    			tag += '<tr>';
+	    			tag += '<td colspan="3" class="w3-center">일치하는 정보가 없습니다.</td>';
+	    			tag += '</tr>';
+	    			tag += '</table>';
+	    		
+	    		$("#list").append(tag);
 		    }
 		});
 	}
 }
 
 function desView(i) {
+	
+	LEMP.Window.open({
+	    "_sPagePath" : "LIST/html/LIST0002.html",
+	    "_sType" : "popup",
+	    "_sWidth" : "70%",
+	    "_sHeight" : "80%",
+	    "_oMessage" : {
+	        "param" : i
+	    }
+	});
+	
+	
 	$("#id01").load("LIST0002.html");
 	document.getElementById('id01').style.display = 'block';
 }

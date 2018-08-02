@@ -54,7 +54,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
     <i class="fa fa-truck" style="font-size:24px"></i><br>목록</button>
     <button class="w3-bar-item w3-button w3-white tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'navigation')">
    <i class="fa fa-map-marker" style="font-size:24px"></i><br>지도</button>
-    <button class="w3-bar-item w3-button w3-white tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'bacode')">
+    <button class="w3-bar-item w3-button w3-white tablink w3-hover-red" style="width:25% !important" onclick="openTab(event,'barcode')">
     <i class="fa fa-barcode" style="font-size:24px"></i><br>바코드</button>
   </div>
 </div>
@@ -63,7 +63,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
 <div class="" style="margin:0px 0px 0px 0px;" id="main">
  <div id="info" class="  tab" style="margin-top:57px;">
   
-<div class="w3-container-large w3-red w3-padding" style="height:200px; text-align:center;" >
+<div class="w3-container-large w3-red w3-padding" style="height:220px; text-align:center;" >
     <img src="../images/profile.png" class="w3-circle w3-section" style="width:50%;">
 </div>
 
@@ -76,24 +76,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
  </div>
 </div>
 
-<div class=" w3-medium">
- <div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%; ">설정</div>
-
- <div class="w3-button w3-padding-small w3-bar w3-block w3-white w3-medium" style="padding-left: 1%; padding-right: 1%;">
-  <div class="w3-bar-item">내 정보 수정</div>
-  <div class="w3-bar-item w3-right">></div>
- </div>
+ <div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%; ">현재 달성 현황</div>
+ <div class="w3-container ">
+  <div class="w3-sand  w3-round w3-margin-top" >
+    <div class="w3-container w3-padding w3-orange w3-round-large" style="width:25%" id="progress">25%</div>
+  </div><br>
+ <p class="">
+  총 <span class="w3-tag w3-white w3-border">0</span>개 중 <span class="w3-tag w3-white w3-border">0</span>개 배송 완료</p>
   
- <div class="w3-button w3-padding-small w3-bar w3-white w3-medium" style="padding-left: 1%; padding-right: 1%;">
-  <div class="w3-bar-item">자주 묻는 질문</div>
-  <div class="w3-bar-item w3-right">></div>
- </div>
+  </div>
 
- <div class="w3-button w3-padding-small w3-bar w3-white w3-medium" style="padding-left: 1%; padding-right: 1%;">
-  <div class="w3-bar-item">1:1 상담</div>
-  <div class="w3-bar-item w3-right">></div>
- </div>
-</div>
   </div>
 </div>
 <!-- END PAGE CONTENT -->

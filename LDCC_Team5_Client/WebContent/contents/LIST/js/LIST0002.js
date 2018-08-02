@@ -52,7 +52,8 @@ function closeLIST0002() {
 	    "_oMessage" : {
 	        "param" : ""
 	    },
-	    "_sCallback" : "page.callback"
+	    "_sCallback" : "page.callback",
+	    "_sType" : "popup"
 	});
 }
 
