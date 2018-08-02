@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="../../LEMP/LEMP.js"></script>
+<script type="text/javascript" src="../../common/js/menu.js?ver=1"></script>
+<script type="text/javascript" src="../js/LIST0002.js"></script>
 <style>
-.w3-button:hover {
-
+body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
 }
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: white;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
-<body>
-    <div class="w3-modal-content w3-animate-top">
-      <header class="w3-container w3-red"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h4>배송지 정보</h4>
-      </header>
-      <div class="w3-container">
-      <center><p><img src="../images/box.png" style="width:150px;" class="w3-padding-32">
-    </p></center>
-       
-
-    <ul class="w3-ul w3-light-grey w3-section">
-  <li><label>주   소</label>&nbsp;&nbsp;서울시 강남구 청담동 61</li>
-  <li><label>수취인</label>&nbsp;&nbsp;홍길동</li>
-  
-</ul>
-      </div>
-      <footer class="w3-container w3-padding-bottom">
-        <div class="w3-bar w3-section w3-center"><button class="w3-button w3-red w3-hover-red">전화</button>
-        <button class="w3-button w3-brown w3-hover-brown" onclick="msgSelect();">메세지</button>
-        <button class="w3-button w3-green w3-hover-green">배송완료</button>
-        </div>
-      </footer>
+<body class="w3-white"> 
+	<div class="w3-modal-content w3-animate-top">
+	    <header class="w3-container w3-red"> 
+		    <span onclick="closeLIST0002();" class="w3-button w3-display-topright">&times;</span>
+		    <h4>배송지 정보</h4>
+	    </header>
+		<div class="w3-container">
+			<center>
+		      	<p>
+		      		<img src="../images/box.png" style="width:150px;" class="w3-padding-32">
+		    	</p>
+	    	</center>
+		    <ul class="w3-ul w3-light-grey w3-section">
+		  		<li id="address"></li>
+		  		<li id="recipient"></li>
+		  		<input type="hidden" id="phone">
+			</ul>
+	    </div>
+	    <footer class="w3-container w3-padding-bottom">
+		    <div class="w3-bar w3-section w3-center">
+		    	<button class="w3-button w3-red w3-hover-red" onclick="call();">전화</button>
+		    	<button class="w3-button w3-brown w3-hover-brown" onclick="msgSelect();">메세지</button>
+		    	<button class="w3-button w3-green w3-hover-green" onclick="LMessage();">배송완료</button>
+		    </div>
+	    </footer>
     </div>
   
-  <div id="id02" class="w3-modal" style="padding-top:200px;">
-  <div class="w3-modal-content w3-animate-zoom">
-
-    <header class="w3-container w3-brown"> 
-      <span onclick="document.getElementById('id02').style.display='none'" 
-      class="w3-button w3-display-topright">&times;</span>
-      <h4>메세지 선택</h4>
-    </header>
-
-    <div class="w3-container">
-       <ul class="w3-ul w3-light-grey w3-section">
-        <li><button class="w3-button w3-hover-light-grey">곧 방문하겠습니다</button></li>
-  <li><button class="w3-button  w3-hover-light-grey">문 앞에 두고 갑니다</button></li>
-  <li><button class="w3-button  w3-hover-light-grey">경비실에 맡기고 갑니다</button></li>
-    <li><button class="w3-button  w3-hover-light-grey">직접 입력</button></li>
-</ul>
-    </div>
-  </div>
-</div>
-
-<script>
-function msgSelect(){
-	document.getElementById('id02').style.display='block';
-}
-</script>
-
+	<div id="id02" class="w3-modal" style="padding-top:200px;">
+		<div class="w3-modal-content w3-animate-zoom">
+		    <header class="w3-container w3-brown"> 
+			    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+			    <h4>메세지 선택</h4>
+		    </header>
+		    <div class="w3-container">
+			    <ul class="w3-ul w3-light-grey w3-section">
+				    <li><button class="w3-button w3-hover-light-grey" onclick="message1();">곧 방문하겠습니다</button></li>
+					<li><button class="w3-button w3-hover-light-grey" onclick="message2();">문 앞에 두고 갑니다</button></li>
+					<li><button class="w3-button w3-hover-light-grey" onclick="message3();">경비실에 맡기고 갑니다</button></li>
+				</ul>
+		    </div>
+		</div>
+	</div>
 </body>
 </html>

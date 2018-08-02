@@ -5,16 +5,6 @@ var page = {
 	},
 
 	initInterface : function(data) {
-/*		var className = data.name + " " + data.id;
-		$("#backBtn").click(function() {
-			LEMP.Window.close({
-				"_oMessage" : {
-					"newName" : className
-				},
-				"_sCallback" : "page.callback"
-			});
-		});*/
-
 		$("#desBtn").click(function() {
 			LEMP.Window.open({
 				"_sPagePath" : "LIST/html/LIST0001.html"

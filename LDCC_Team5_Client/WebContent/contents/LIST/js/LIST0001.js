@@ -23,22 +23,22 @@ var page = {
 			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductList/'+id+'/'+today,
 		    success : function(result)  {
 		    	if(result != "") {
-		    		var tag = '';
-		    		tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
-		    		tag += '<tr>';
-		    		tag += '<th style="width:20%;"  class="w3-center">순서</th>';
-		    		tag += '<th style="width:60%;" class="w3-center">주소</th>';
-		    		tag += '<th style="width:20%;"  class="w3-center">수취인</th>';
-		    		tag += '</tr>';
-		    		for(var i=1; i<=args.length; i++) {
-		    			tag += '<tr onclick="desView('+i+');">';
-		    			tag += '<td>'+i+'</td>';
-		    			tag += '<td>'+args.address+'</td>';
-		    			tag += '<td>'+args.recipient+'</td>';
-		    			tag += '</tr>';
-		    			tag += '</table>';
-		    		}
-		    		$("#list").append(tag);
+			    	var tag = '';
+			    	tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
+			    	tag += '<tr>';
+			    	tag += '<th style="width:20%;"  class="w3-center">순서</th>';
+			    	tag += '<th style="width:60%;" class="w3-center">주소</th>';
+			    	tag += '<th style="width:20%;"  class="w3-center">수취인</th>';
+			    	tag += '</tr>';
+			    	$.each(result, function(key, value) {
+			    		tag += '<tr onclick="desView('+value.num+');">';
+			    		tag += '<td>'+value.num+'</td>';
+			    		tag += '<td>'+value.address+'</td>';
+			    		tag += '<td>'+value.recipient+'</td>';
+			    		tag += '</tr>';
+		    		});
+			    	tag += '</table>';
+			    	$("#list").append(tag);
 		    	}
 		    	else {
 		    		var tag = '';
