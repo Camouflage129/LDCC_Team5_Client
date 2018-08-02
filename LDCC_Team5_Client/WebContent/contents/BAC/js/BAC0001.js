@@ -3,7 +3,6 @@ var page = {
 		page.initInterface(args.data);
 		page.initLayout(args.data);
 	},
-	
 	callback : function(data) {
 		LEMP.Window.replace({
 			"_sPagePath" : "LIST/html/LIST0001.html",
@@ -14,29 +13,29 @@ var page = {
 			}
 		});
 	},
-	
 	initInterface : function(data) {
 		
 	},
-	
 	initLayout : function(data) {
 		LEMP.Window.openCodeReader({
 		    "_fCallback" : function(resOpenCodeReader)  {
 		    	if(resOpenCodeReader.result) {
 		    		var data = resOpenCodeReader.data;
-		    		alert(data);
 		    		$.ajax({
 		    			type : 'GET',
 		    			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductInfo/'+data,
 		    		    success : function(result)  {
 		    		    	$.each(result, function(key, value) {
-		    		    		LEMP.Window.open({
-		    		    			"_sPagePath" : "LIST/html/LIST0002.html",
-		    		    			"_oMessage" : {
-		    		    				"param" : value
-		    		    			}
-		    		    		});
-		    		    		$("#barcode_result").text(JSON.stringify(result));
+		    		    		if(value.delivery_complete == 'n') {
+		    		    			LEMP.Window.open({
+		    		    				"_sPagePath" : "LIST/html/LIST0002.html",
+		    		    				"_oMessage" : {
+		    		    					"param" : value
+		    		    				}
+		    		    			});
+		    		    		}
+		    		    		else
+		    		    			alert("이미 배송완료 처리된 물품입니다.")
 		    		    	});
 		    		    },
 					    error : function(){ 

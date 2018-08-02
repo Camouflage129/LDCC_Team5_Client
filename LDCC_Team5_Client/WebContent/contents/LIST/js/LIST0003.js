@@ -41,7 +41,7 @@ function LMessage() {
 				success : function(data) {
 					if(data == "success") {
 						alert("고객님에게 배송완료 카카오톡이 전송되었습니다.");
-						closeLIST0002();
+						closeLIST0003();
 					}
 				}
 			});
@@ -49,13 +49,14 @@ function LMessage() {
 	})
 }
 
-function closeLIST0002() {
+function closeLIST0003() {
 	LEMP.Storage.remove({ "_sKey" : "product" });
 	LEMP.Window.close({
 	    "_oMessage" : {
 	        "param" : ""
 	    },
-	    "_sCallback" : "page.callback"
+	    "_sType" : "popup",
+	    "_sCallback" : ""
 	});
 }
 
