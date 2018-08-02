@@ -46,9 +46,9 @@ var page = {
 		    	$("#remainBox").append(list[0]);
 		    	$("#totalBox").append(list[1]);
 		    	if(list[1] == 0)
-		    		percent = 100;
+		    		percent = "100%";
 		    	else
-		    		percent = (list[0]/list[1])*100;
+		    		percent = (list[0]/list[1])*100+"%";
 		    	$("#percent").append(percent);
 		    	$("#percent").css("style","width:"+percent+"%;");
 		    }
