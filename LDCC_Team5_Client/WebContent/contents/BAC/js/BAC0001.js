@@ -18,13 +18,15 @@ var page = {
 		    			type : 'GET',
 		    			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductInfo/'+data,
 		    		    success : function(result)  {
-		    		    	LEMP.Window.open({
-		    		    		"_sPagePath" : "LIST/html/LIST0002.html",
-		    		    	    "_oMessage" : {
-		    		    	        "param" : result
-		    		    	    }
+		    		    	$.each(result, function(key, value) {
+		    		    		LEMP.Window.open({
+		    		    			"_sPagePath" : "LIST/html/LIST0002.html",
+		    		    			"_oMessage" : {
+		    		    				"param" : value
+		    		    			}
+		    		    		});
+		    		    		$("#barcode_result").text(JSON.stringify(result));
 		    		    	});
-		    				$("#barcode_result").text(JSON.stringify(result));
 		    		    },
 					    error : function(){ 
 					    	alert("일치하는 정보가 없습니다.");
