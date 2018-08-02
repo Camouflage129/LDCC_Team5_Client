@@ -24,15 +24,12 @@ function openTab(evt, tabName) {
 		});
 	}
 	if (tabName == "info") {
-		var login = LEMP.Storage.get({
-		    "_sKey" : "login"
-		});
 		LEMP.Window.replace({
 			"_sPagePath" : "INF/html/INF0001.html",
 			"_sName" : "replacePage",
 			"_bHardwareAccel" : true,
 			"_oMessage" : {
-				"param" : login
+				"param" : ""
 			}
 		});
 	}
