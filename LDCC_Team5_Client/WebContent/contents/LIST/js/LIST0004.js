@@ -20,7 +20,7 @@ function closeLIST0004() {
 	        "param" : ""
 	    },
 	    "_sType" : "popup",
-	    "_sCallback" : ""
+	    "_sCallback" : "page.callback"
 	});
 }
 

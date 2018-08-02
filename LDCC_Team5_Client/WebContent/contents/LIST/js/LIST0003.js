@@ -56,7 +56,7 @@ function closeLIST0003() {
 	        "param" : ""
 	    },
 	    "_sType" : "popup",
-	    "_sCallback" : ""
+	    "_sCallback" : "page.callback"
 	});
 }
 
