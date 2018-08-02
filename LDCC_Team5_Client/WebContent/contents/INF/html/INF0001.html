@@ -68,25 +68,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: 'Nanum Gothic', serif;
 </div>
 
 <div class=" w3-medium">
- <div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%;">개인 정보</div>
- <div class="w3-bar-block">
-  <div id="name" class="w3-bar-item w3-large"></div>
-  <div id="date" class="w3-bar-item"></div>
-  <div id="region" class="w3-bar-item"></div>
- </div>
+	<div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%;">개인 정보</div>
+	<div class="w3-bar-block">
+		<div id="name" class="w3-bar-item w3-large"></div>
+		<div id="date" class="w3-bar-item"></div>
+		<div id="region" class="w3-bar-item"></div>
+	</div>
 </div>
 
- <div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%; ">현재 달성 현황</div>
- <div class="w3-container ">
-  <div class="w3-sand  w3-round w3-margin-top" >
-    <div class="w3-container w3-padding w3-orange w3-round-large" style="width:25%" id="progress">25%</div>
-  </div><br>
- <p class="">
-  총 <span class="w3-tag w3-white w3-border">0</span>개 중 <span class="w3-tag w3-white w3-border">0</span>개 배송 완료</p>
-  
-  </div>
-
-  </div>
+<div class="w3-panel" style="background-color:#f0f0f0; padding-left: 5%; ">현재 달성 현황</div>
+<div class="w3-container ">
+	<div class="w3-sand  w3-round w3-margin-top">
+		<div id="percent" class="w3-container w3-padding w3-orange w3-round-large" style="width:0%" id="progress"></div>
+	</div><br>
+	<p>총 <span id="remainBox" class="w3-tag w3-white w3-border"></span>개 중 <span id="totalBox" class="w3-tag w3-white w3-border"></span>개 배송 완료</p>
 </div>
 <!-- END PAGE CONTENT -->
 </body>
