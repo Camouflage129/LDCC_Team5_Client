@@ -78,6 +78,18 @@ var page = {
 }
 
 function desView(i) {
+	
+	LEMP.Window.open({
+	    "_sPagePath" : "LIST/html/LIST0002.html",
+	    "_sType" : "popup",
+	    "_sWidth" : "70%",
+	    "_sHeight" : "80%",
+	    "_oMessage" : {
+	        "param" : i
+	    }
+	});
+	
+	
 	$("#id01").load("LIST0002.html");
 	document.getElementById('id01').style.display = 'block';
 }
