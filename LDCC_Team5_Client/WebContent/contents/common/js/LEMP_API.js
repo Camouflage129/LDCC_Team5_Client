@@ -22,8 +22,8 @@ function LMessage() {
 			"X-HTTP-Method-Override" : "POST"
 		},
 		data : JSON.stringify({
-			"msg_id" : "01026632668",
-			"dest_phone" : "010-2663-2668",
+			"msg_id" : "01076871249",
+			"dest_phone" : "010-7687-1249",
 			"send_phone" : "01045843552",
 			"sender_key" : "d6b73318d4927aa80df1022e07fecf06c55b44bf",
 			"msg_body" : "고객님의 택배가 안전하게 배송되었습니다 :)",
