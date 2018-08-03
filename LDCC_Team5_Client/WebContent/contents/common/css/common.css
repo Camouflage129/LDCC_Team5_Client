@@ -3,7 +3,6 @@
 /***************************************************************************************************
 	Reset
 ***************************************************************************************************/
-
 html, body {height:100%; margin:0; padding:0; -webkit-text-size-adjust:none;}
 body {min-height:100%; font:normal 16px dotum, 'Samsung Gothic','Malgun Gothic', '맑은 고딕', dotum,'돋움',sans-serif; color:#444; word-wrap:break-word; word-break:break-all; -webkit-text-size-adjust: none;}
 img {border:none;}

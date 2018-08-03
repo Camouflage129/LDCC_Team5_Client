@@ -1,5 +1,6 @@
 var page = {
 	init : function(args) {
+		$('#load').hide();
 		page.initInterface();
 		page.initLayout();
 	},

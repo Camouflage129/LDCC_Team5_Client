@@ -1,6 +1,5 @@
 var page = {
 	init : function(args) {
-		
 	/*	page.initTmap();*/
 		page.drawTmap();
 		
@@ -20,7 +19,7 @@ var page = {
 		map = new Tmap.Map({
 			div : 'map_div', // map을 표시해줄 div
 			width : "100%",// map의 width 설정
-			height : "500px",// map의 height 설정
+			height : "420px",// map의 height 설정
 		});
 		map.setCenter(new Tmap.LonLat("126.93751471394472", "37.55420997079275").transform("EPSG:4326", "EPSG:3857"), 15);//설정한 좌표를 "EPSG:3857"로 좌표변환한 좌표값으로 중심점으로 설정합니다.
 
@@ -270,6 +269,7 @@ function navStart(){
 }
 
 function navi(){
+	alert("시작")
     Kakao.Navi.start({
         name: "1 목적지",
         x: 126.9453253069999,

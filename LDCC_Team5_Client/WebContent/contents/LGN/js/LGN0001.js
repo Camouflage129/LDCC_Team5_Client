@@ -36,6 +36,7 @@ function login() {
 
 var page = {
 	init : function(args) {
+		$('#load').hide();
 		page.initInterface();
 	},
 	

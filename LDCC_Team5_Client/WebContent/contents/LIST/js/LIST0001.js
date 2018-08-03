@@ -1,7 +1,7 @@
 var page = {
 	init : function(args) {
+		$('#load').hide();	
 		page.initLayout(args);
-		
 	},
 	callback : function() {
 		LEMP.Window.replace({
