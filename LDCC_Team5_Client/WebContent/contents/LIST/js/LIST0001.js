@@ -1,6 +1,7 @@
 var page = {
 	init : function(args) {
 		page.initLayout(args);
+		
 	},
 	callback : function() {
 		LEMP.Window.replace({
@@ -93,6 +94,9 @@ var page = {
 				$("#list").append(tag);
 			}
 		});
+	
+		
+	
 	}
 }
 
