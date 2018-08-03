@@ -178,6 +178,9 @@ var page = {
 			}),
 			//데이터 로드가 성공적으로 완료되었을 때 발생하는 함수입니다.
 			success:function(response){
+				
+				$("#loading").hide();
+				
 				prtcl = response;
 
 				// 결과 출력
@@ -230,11 +233,11 @@ var page = {
 			
 			
 				
-			
-				
+		
 			},
 			//요청 실패시 콘솔창에서 에러 내용을 확인할 수 있습니다.
 			error:function(request,status,error){
+				$("#loading").hide();
 				console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 			}
 		});
