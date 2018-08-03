@@ -13,17 +13,6 @@ var page = {
 	},
 }
 
-function closeLIST0004() {
-	LEMP.Storage.remove({ "_sKey" : "product" });
-	LEMP.Window.close({
-	    "_oMessage" : {
-	        "param" : ""
-	    },
-	    "_sType" : "popup",
-	    "_sCallback" : "page.callback"
-	});
-}
-
 function call() {
 	var product = LEMP.Storage.get({
 	    "_sKey" : "product"

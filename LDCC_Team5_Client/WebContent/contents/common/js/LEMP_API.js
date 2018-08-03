@@ -1,3 +1,13 @@
+function closeLIST() {
+	LEMP.Storage.remove({ "_sKey" : "product" });
+	LEMP.Window.close({
+	    "_oMessage" : {
+	        "param" : ""
+	    },
+	    "_sType" : "popup",
+	    "_sCallback" : "page.callback"
+	});
+}
 
 function LMessage() {
 	var product = LEMP.Storage.get({
@@ -27,7 +37,7 @@ function LMessage() {
 				success : function(data) {
 					if(data == "success") {
 						alert("고객님에게 배송완료 카카오톡이 전송되었습니다.");
-						closeLIST0002();
+						closeLIST(product.num);
 					}
 				}
 			});

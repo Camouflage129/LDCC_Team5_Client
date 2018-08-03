@@ -12,13 +12,3 @@ var page = {
 		});
 	},
 }
-
-function closeLIST0002() {
-	LEMP.Storage.remove({ "_sKey" : "product" });
-	LEMP.Window.close({
-	    "_oMessage" : {
-	        "param" : ""
-	    },
-	    "_sCallback" : "page.callback"
-	});
-}

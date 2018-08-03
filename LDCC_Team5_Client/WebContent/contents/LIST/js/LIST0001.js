@@ -33,6 +33,7 @@ var page = {
 			url : 'http://52.79.44.163:8080/LDCC_Team5_Server/getProductList/' + id + '/' + today,
 			success : function(result) {
 				if (result != "") {
+					var current = 0;
 					var tag = '';
 					tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
 					tag += '<tr>';
@@ -50,15 +51,18 @@ var page = {
 							tag += '</tr>';
 						}
 						else {
-							tag += '<tr onclick="desView2(' + value.num + ');" class="w3-light-blue">';
+							tag += '<tr id="current'+value.num+'"'+'onclick="desView2(' + value.num + ');" class="w3-light-blue">';
 							tag += '<td>' + value.num + '</td>';
 							tag += '<td>' + value.address + '</td>';
 							tag += '<td>' + value.recipient + '</td>';
 							tag += '</tr>';
+							current = value.num;
 						}
 					});
 					tag += '</table>';
 					$("#list").append(tag);
+					if(current != 0)
+						location.href="#current"+current;
 				} else {
 					var tag = '';
 					tag += '<table class="w3-table-all w3-margin-top w3-small" id="desList" style="word-wrap : break-word; margin:0;">';
