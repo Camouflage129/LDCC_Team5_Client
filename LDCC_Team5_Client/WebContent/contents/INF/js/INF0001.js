@@ -48,7 +48,7 @@ var page = {
 		    	if(list[1] == 0)
 		    		percent = "100%";
 		    	else
-		    		percent = (list[0]/list[1])*100+"%";
+		    		percent = parseInt((list[0]/list[1])*100)+"%";
 		    	$("#percent").append(percent);
 		    	$("#percent").css("width", percent);
 		    }
