@@ -50,7 +50,7 @@ var page = {
 		    	else
 		    		percent = (list[0]/list[1])*100+"%";
 		    	$("#percent").append(percent);
-		    	$("#percent").css("style","width:"+percent+"%;");
+		    	$("#percent").css("width", percent);
 		    }
 		});
 	}

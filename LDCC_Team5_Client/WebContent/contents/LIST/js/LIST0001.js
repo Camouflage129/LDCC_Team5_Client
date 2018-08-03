@@ -50,7 +50,7 @@ var page = {
 							tag += '</tr>';
 						}
 						else {
-							tag += '<tr onclick="desView2(' + value.num + ');" class="w3-red">';
+							tag += '<tr onclick="desView2(' + value.num + ');" class="w3-light-blue">';
 							tag += '<td>' + value.num + '</td>';
 							tag += '<td>' + value.address + '</td>';
 							tag += '<td>' + value.recipient + '</td>';
